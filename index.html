@@ -6,7 +6,7 @@
     <title>家乡年俗数字档案 - 唐山文化之音</title>
     <style>
         :root {
-            --primary-red: #b32d2e; /* 中国红 */
+            --primary-red: #b32d2e; 
             --gold: #d4af37;
             --bg-paper: #f9f7f2;
             --text-black: #2c3e50;
@@ -23,18 +23,19 @@
         header {
             background-color: var(--primary-red);
             color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
             border-bottom: 5px solid var(--gold);
-            background-image: linear-gradient(rgba(179, 45, 46, 0.9), rgba(179, 45, 46, 0.9)), 
+            background-image: linear-gradient(rgba(179, 45, 46, 0.85), rgba(179, 45, 46, 0.85)), 
                               url('https://www.transparenttextures.com/patterns/paper.png');
         }
 
-        .subtitle {
+        .author-tag {
             font-size: 1.1rem;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
+            margin-top: 15px;
             display: block;
+            color: var(--gold);
+            font-weight: bold;
         }
 
         nav {
@@ -53,7 +54,6 @@
             text-decoration: none;
             color: var(--primary-red);
             font-weight: bold;
-            font-size: 0.95rem;
         }
 
         .container {
@@ -64,6 +64,29 @@
             box-shadow: 0 0 30px rgba(0,0,0,0.05);
         }
 
+        /* 图片样式 */
+        .photo-frame {
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .photo-frame img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .photo-caption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
         h2 {
             color: var(--primary-red);
             border-left: 6px solid var(--primary-red);
@@ -71,7 +94,6 @@
             margin-top: 50px;
         }
 
-        /* 地域差异板块样式 */
         .diff-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -84,12 +106,6 @@
             padding: 20px;
             background: #fffcf5;
             border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .diff-card:hover {
-            border-color: var(--gold);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .region-name {
@@ -99,7 +115,6 @@
             display: block;
             margin-bottom: 10px;
             border-bottom: 1px solid var(--gold);
-            padding-bottom: 5px;
         }
 
         .archive-table {
@@ -111,23 +126,11 @@
         .archive-table th, .archive-table td {
             border: 1px solid #e0e0e0;
             padding: 15px;
-            text-align: left;
         }
 
         .archive-table th {
             background-color: var(--primary-red);
             color: white;
-            width: 30%;
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--gold);
-            color: white;
-            padding: 2px 12px;
-            border-radius: 2px;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
         }
 
         footer {
@@ -142,9 +145,9 @@
 <body>
 
 <header>
-    <span class="subtitle">家乡年俗·数字档案记录</span>
-    <h1>唐山冀东地秧歌文化考证</h1>
-    <p>—— 探寻地域差异，传播唐山之音 ——</p>
+    <span style="letter-spacing: 4px; display: block; margin-bottom: 10px;">家乡年俗·数字档案记录</span>
+    <h1 style="font-size: 2.5rem; margin: 0;">唐山冀东地秧歌文化考证</h1>
+    <span class="author-tag">作者：杨嘉圣</span>
 </header>
 
 <nav>
@@ -155,58 +158,64 @@
 </nav>
 
 <div class="container">
+
+    <!-- 视觉震撼图 -->
+    <div class="photo-frame">
+        <img src="pic1.jpg" alt="唐山地秧歌动态展示">
+        <div class="photo-caption">图1：冀东地秧歌中极具爆发力的“大裙摆”舞姿 摄影：杨嘉圣</div>
+    </div>
     
-    <!-- 第一部分：源流考证 -->
     <section id="origin">
         <h2>一、源流考证：燕赵大地的文化基因</h2>
-        <div style="background:#fdfaf4; padding:25px; border:1px solid #eee;">
-            <span class="badge">历史溯源</span>
-            <p><strong>唐山地秧歌</strong>的源头可追溯至明初的“移民文化”。考证显示，当时来自苏、皖等地的移民迁入唐山地区，将南方的“花鼓灯”技艺与北方祭祀舞蹈融合。在清代乾隆年间，地秧歌已成为唐山人过年不可或缺的仪式，承担着“祛邪、祭社、祈丰”的社会功能。</p>
+        <p><strong>唐山地秧歌</strong>的源头可追溯至明初的“移民文化”。考证显示，当时来自苏、皖等地的移民迁入唐山地区，将南方的“花鼓灯”技艺与北方祭祀舞蹈融合。</p>
+        
+        <div class="photo-frame">
+            <img src="pic2.jpg" alt="唐山秧歌表演现场">
+            <div class="photo-caption">图2：正月初一至十五期间，唐山各地的秧歌汇演 摄影：杨嘉圣</div>
         </div>
     </section>
 
-    <!-- 第二部分：习俗细节 -->
     <section id="details">
         <h2>二、细节制作：年俗仪式的美学特征</h2>
-        <p>唐山年俗讲究一个“闹”字，地秧歌的细节精髓在于：</p>
-        <ul>
-            <li><strong>服饰妆造</strong>：色彩饱和度极高，以大红大绿寓意生命力的爆发。</li>
-            <li><strong>核心步法</strong>：讲究“扭、逗、浪”，尤其是“公子”的诙谐与“妞”的羞涩形成鲜明对比。</li>
-            <li><strong>器乐配合</strong>：以大唢呐为主奏，节奏多为“快七三”拍，这种紧凑的鼓点是唐山人爽利性格的写照。</li>
-        </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+            <div style="flex: 1; min-width: 300px;">
+                <p>唐山年俗讲究一个“闹”字，地秧歌的细节精髓在于：</p>
+                <ul>
+                    <li><strong>服饰妆造</strong>：色彩饱和度极高，以大红大绿寓意生命力的爆发。</li>
+                    <li><strong>核心步法</strong>：讲究“扭、逗、浪”，形成鲜明的对比。</li>
+                    <li><strong>器乐配合</strong>：以大唢呐为主奏，节奏多为“快七三”拍。</li>
+                </ul>
+            </div>
+            <div class="photo-frame" style="flex: 1; min-width: 300px; margin: 0;">
+                <img src="pic3.jpg" alt="秧歌演员特写">
+                <div class="photo-caption">图3：地秧歌演员标志性的妆容与喜悦神态 摄影：杨嘉圣</div>
+            </div>
+        </div>
     </section>
 
-    <!-- 第三部分：地域差异（新增内容） -->
     <section id="regional">
         <h2>三、地域差异：各具千秋的派别风格</h2>
-        <p>经调研考证，唐山地秧歌并非千篇一律，各县区因地理环境和经贸往来的不同，形成了独特的表演风格：</p>
-        
         <div class="diff-grid">
             <div class="diff-card">
                 <span class="region-name">乐亭流派</span>
-                <p><strong>特点：细腻俏皮</strong></p>
-                <p>受“乐亭商帮”文化影响，表演风格更加细腻、诙谐。乐亭秧歌中的“丑角”不仅扭动幅度大，更注重眼神的交流，具有很强的叙事性和戏剧感。</p>
+                <p>受“乐亭商帮”文化影响，表演风格更加细腻、诙谐，注重眼神交流。</p>
             </div>
             <div class="diff-card">
                 <span class="region-name">滦南/滦州流派</span>
-                <p><strong>特点：纯正质朴</strong></p>
-                <p>作为评剧的发源地，此地的秧歌与戏曲结合紧密。动作幅度较大，表现力粗犷豪放，保留了更多古早的农耕祭祀痕迹。</p>
+                <p>作为评剧发源地，动作幅度较大，保留了更多古早的农耕祭祀痕迹。</p>
             </div>
             <div class="diff-card">
                 <span class="region-name">遵化/迁安流派</span>
-                <p><strong>特点：刚劲有力</strong></p>
-                <p>北部山区由于历史上的长城守备文化，秧歌中融入了武术动作，步法沉稳，气势雄浑，体现了山地居民坚韧的性格特征。</p>
+                <p>融入了武术动作，步法沉稳，气势雄浑，体现了山地居民坚韧的性格。</p>
             </div>
         </div>
-        <p style="font-size: 0.9rem; color: #666; font-style: italic;">* 考证结论：这种“百里不同风”的差异，正是唐山文化包容性与创造力的体现。</p>
     </section>
 
-    <!-- 第四部分：数字档案 -->
     <section id="archive">
         <h2>四、唐山年俗数字档案</h2>
         <table class="archive-table">
             <tr>
-                <th>档案类目</th>
+                <th width="30%">档案类目</th>
                 <th>考证与记录内容</th>
             </tr>
             <tr>
@@ -214,12 +223,8 @@
                 <td>冀东地秧歌（唐山地秧歌）</td>
             </tr>
             <tr>
-                <td>流派分布</td>
-                <td>乐亭派、滦州派、遵化派等</td>
-            </tr>
-            <tr>
-                <td>核心时间</td>
-                <td>正月初一至正月十五</td>
+                <td>作者/摄影</td>
+                <td>杨嘉圣</td>
             </tr>
             <tr>
                 <td>非遗地位</td>
@@ -236,7 +241,7 @@
 
 <footer>
     <p>唐山文化数字记录项目组 | 调研档案</p>
-    <p>&copy; 2024 追寻家乡文化之根</p>
+    <p>&copy; 2024 追寻家乡文化之根 - 杨嘉圣 作品</p>
 </footer>
 
 </body>
